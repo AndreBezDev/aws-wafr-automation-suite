@@ -1,0 +1,165 @@
+{
+    "operationalExcellence": {
+        "OPS 7. How do you know that you are ready to support a workload?": {
+            "UnselectedChoices": [
+                "Use playbooks to investigate issues",
+                "Enable support plans for production workloads",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "security": {
+        "SEC 1. How do you securely operate your workload?": {
+            "UnselectedChoices": [
+                "Automate testing and validation of security controls in pipelines",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 3. How do you manage permissions for people and machines?": {
+            "UnselectedChoices": [
+                "Share resources securely within your organization",
+                "Share resources securely with a third party",
+                "Manage access based on life cycle",
+                "Analyze public and cross-account access",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 5. How do you protect your network resources?": {
+            "UnselectedChoices": [
+                "Automate network protection",
+                "Implement inspection and protection",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 7. How do you classify your data?": {
+            "UnselectedChoices": [
+                "Automate identification and classification",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 8. How do you protect your data at rest?": {
+            "UnselectedChoices": [
+                "Automate data at rest protection",
+                "Enforce access control",
+                "Use mechanisms to keep people away from data",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 10. How do you anticipate, respond to, and recover from incidents?": {
+            "UnselectedChoices": [
+                "Automate containment capability",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "reliability": {
+        "REL 1. How do you manage service quotas and constraints?": {
+            "UnselectedChoices": [
+                "Automate quota management",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 4. How do you design interactions in a distributed system to prevent failures?": {
+            "UnselectedChoices": [
+                "Make all responses idempotent",
+                "Do constant work",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 7. How do you design your workload to adapt to changes in demand?": {
+            "UnselectedChoices": [
+                "Load test your workload",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 8. How do you implement change?": {
+            "UnselectedChoices": [
+                "Integrate resiliency testing as part of your deployment",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "performance": {
+        "PERF 1. How do you select the best performing architecture?": {
+            "UnselectedChoices": [
+                "Benchmark existing workloads",
+                "Load test your workload",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "costOptimization": {
+        "COST 1. How do you implement cloud financial management?": {
+            "UnselectedChoices": [
+                "Quantify business value from cost optimization",
+                "Report and notify on cost optimization",
+                "Create a cost-aware culture",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "COST 9. How do you manage demand, and supply resources?": {
+            "UnselectedChoices": [
+                "Implement a buffer or throttle to manage demand",
+                "Supply resources dynamically",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "sustainability": {
+        "SUS 1. How do you select Regions for your workload?": {
+            "UnselectedChoices": [
+                "Choose Region based on both business requirements and sustainability goals"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 3. How do you take advantage of software and architecture patterns to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Optimize software and architecture for asynchronous and scheduled jobs",
+                "Optimize areas of code that consume the most time or resources",
+                "Optimize impact on devices and equipment",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 4. How do you take advantage of data management policies and patterns to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Implement a data classification policy",
+                "Use policies to manage the lifecycle of your datasets",
+                "Use shared file systems or storage to access common data",
+                "Minimize data movement across networks",
+                "Back up data only when difficult to recreate",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 5. How do you select and use cloud hardware and services in your architecture to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Optimize your use of hardware-based compute accelerators",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 6. How do your organizational processes support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Adopt methods that can rapidly introduce sustainability improvements",
+                "Use managed device farms for testing",
+                "None of these"
+            ],
+            "Risk": "MEDIUM"
+        }
+    }
+}

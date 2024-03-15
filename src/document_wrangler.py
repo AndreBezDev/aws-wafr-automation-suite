@@ -1,28 +1,41 @@
+#third-party imports
 import boto3
-from io import BytesIO
 from docx.api import Document
 from docx.shared import Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 import matplotlib.pyplot as plt
-import random
+
+#system imports
+from io import BytesIO
+import json
+from datetime import datetime
+
+#local/user imports
+from wafr_tool_api import extracted_data_by_pillar, filter_high_risk_questions, filter_medium_risk_questions
+
+#Class Definitions
+class DateTimeEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, datetime):
+            return o.isoformat()
+        return super().default(o)
+
 
 ###Workflow
 # Copy template to customer folder
 # then edit the customer one
 # Pull in AWS WAFR Report - extract data
 
-def initialise_aws_clients():
-    s3 = boto3.client('s3')
-
+# Function to create customer copy from base template
 def copy_template_to_output_bucket(input_bucket, input_key, output_bucket, customer_folder):
     #To Do - create distinct files everytime
-    # Copy the template from input bucket to output bucket under customer-specific folder
     copy_source = {'Bucket': input_bucket, 'Key': input_key}
     output_key = f'{customer_folder}/CCL_WAFR_Report.docx'  # Adjust the output key as needed
     s3.copy_object(CopySource=copy_source, Bucket=output_bucket, Key=output_key)
 
     print(f"Template copied successfully to {output_bucket}/{output_key}")
 
+# Function to download wip doc into container runtime
 def download_docx_from_s3(bucket_name, key, local_path):
     # Download the document from S3
     s3.download_file(bucket_name, key, local_path)
@@ -33,6 +46,9 @@ def download_docx_from_s3(bucket_name, key, local_path):
 
 # Function to create a Word document with a heading and a table
 def modify_word_document():
+    #trigger wafr extraction
+    filtered_data = filter_high_risk_questions(extracted_data_by_pillar)
+    
     # Create a new Word document
     doc = Document(f'{local_path}')
 
