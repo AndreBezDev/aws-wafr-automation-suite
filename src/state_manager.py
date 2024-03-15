@@ -12,6 +12,7 @@ from datetime import datetime
 
 #local/user imports
 from wafr_tool_api import fetch_wafr_questions
+from document_wrangler import initialise_docs
 
 #Class Definitions
 class DateTimeEncoder(json.JSONEncoder):
@@ -31,5 +32,12 @@ workload_id = 'f54f24c187bd00731cbab8b1532fff59' #To Do - fetch appropriate id f
 lens_alias = 'arn:aws:wellarchitected::aws:lens/wellarchitected'
 milestone_number = 2 #normally 1
 
+# Define s3 artefact params - To Do enable selection of templates 
+input_bucket = 'aws-wafr-automation-base-templates'
+input_key = 'CCL-2024/CCL AWS WAFR - Report Template v0.1.docx'
+output_bucket = 'aws-wafr-automation-output-reports'  # Replace with your output bucket name
+customer_folder = 'CCL'  # Specify customer-specific folder name
+
 if __name__ == "__main__":
     fetch_wafr_questions(workload_id,lens_alias, milestone_number)
+    initialise_docs(input_bucket, input_key, output_bucket, customer_folder)
