@@ -15,7 +15,7 @@ import json
 from datetime import datetime
 
 #local/user imports
-
+from docx_helper_functions import add_empty_line, add_heading, add_page_break, add_paragraph, add_subheading
 
 #Class Definitions
 class DateTimeEncoder(json.JSONEncoder):
@@ -82,60 +82,6 @@ def upload_to_s3(file_path, bucket_name, object_name):
     print(f"File uploaded successfully to S3 bucket '{bucket_name}' with key '{object_name}'")
     return True
 
-
-# Point to a JSON file and convert to usable table in word
-def json_to_word_table(json_data, doc, doc_path):
-
-    # Create a new Word document
-    doc = Document(doc_path)
-
-    # Iterate over each key-value pair in the JSON data
-    for key, value in json_data.items():
-        # Add key as a heading to the document
-        doc.add_heading(key.capitalize(), level=1)
-
-        # Create a table with two columns: Key and Value
-        table = doc.add_table(rows=1, cols=2)
-        table.style = 'Table Grid'
-        hdr_cells = table.rows[0].cells
-        hdr_cells[0].text = 'Key'
-        hdr_cells[1].text = 'Value'
-
-        # Function to recursively add rows for nested dictionaries
-        def add_rows(data, table):
-            for k, v in data.items():
-                if isinstance(v, dict):
-                    # If the value is a dictionary, add a row with the key and 'Dict'
-                    row_cells = table.add_row().cells
-                    row_cells[0].text = k
-                    row_cells[1].text = 'Dict'
-                    # Recursively add rows for the nested dictionary
-                    add_rows(v, table)
-                elif isinstance(v, list):
-                    # If the value is a list, add a row with the key and 'List'
-                    row_cells = table.add_row().cells
-                    row_cells[0].text = k
-                    row_cells[1].text = 'List'
-                    # Iterate over each element in the list
-                    for item in v:
-                        # Add a row for each element
-                        row_cells = table.add_row().cells
-                        row_cells[0].text = ''
-                        row_cells[1].text = str(item)
-                else:
-                    # For other types, add a row with the key and the value
-                    row_cells = table.add_row().cells
-                    row_cells[0].text = k
-                    row_cells[1].text = str(v)
-
-        # Call the add_rows function to populate the table
-        add_rows(value, table)
-
-    # Save the document
-    doc.save(doc_path)
-    
-
-
 # Function to create a Word document with a heading and a table
 def modify_word_document(local_path):
         
@@ -150,38 +96,8 @@ def modify_word_document(local_path):
     print(f"Document modified at {local_path}")
 
 
-#test func
-def json_to_flat_table(json_data, doc, doc_path):
-    """
-    Convert JSON data to a flat table in a Word document.
-
-    :param json_data: JSON data to convert to a flat table.
-    :param doc: Word document object to write the table to.
-    :param doc_path: Path to save the Word document.
-    """
-    # Create a table with number of rows as the length of the JSON data
-    table = doc.add_table(rows=1, cols=len(json_data) + 1)
-    table.style = 'Table Grid'
-
-    # Add column headers
-    header_cells = table.rows[0].cells
-    header_cells[0].text = 'Question'
-    for idx, key in enumerate(json_data.keys()):
-        header_cells[idx + 1].text = key
-
-    # Add data to the table
-    for row_idx, (question, values) in enumerate(json_data.items()):
-        cells = table.add_row().cells
-        cells[0].text = question
-        for col_idx, (header, value) in enumerate(values.items()):
-            cells[col_idx + 1].text = str(value)
-
-    # Save the document
-    doc.save(doc_path)
-
-#test func2
-    
-def json_to_table2(json_data, doc, doc_path):
+#JSON to Word Table  
+def json_to_table(json_data, doc, doc_path):
     """
     Convert JSON data to a table in a Word document with vertical cell merging and separated best practice choices.
 
@@ -254,6 +170,36 @@ def json_to_table2(json_data, doc, doc_path):
     # Save the document
     doc.save(doc_path)
 
+# Create Risk Metrics breakdown / counts
+def create_risk_metrics_table(json_data, doc_path, doc):
+    """
+    Creates a Word table for risk metrics breakdown.
+    
+    Args:
+    - data: List of dictionaries containing risk metrics data.
+    
+    Returns:
+    - Document: Word document object containing the generated table.
+    """
+    
+    # Add a table with headers
+    table = doc.add_table(rows=1, cols=len(json_data[0]))
+
+    # Add column headers
+    headers = json_data[0].keys()
+    row = table.rows[0]
+    for idx, header in enumerate(headers):
+        row.cells[idx].text = header
+
+    # Add data to the table
+    for entry in json_data:
+        row = table.add_row().cells
+        for idx, header in enumerate(headers):
+            row[idx].text = str(entry[header])
+
+    # Save the document
+    doc.save(doc_path)
+
 def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     #initialise clients
     s3 = boto3.client('s3')
@@ -272,20 +218,46 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     key = f'{customer_folder}/CCL_WAFR_Report.docx'      # Replace with the key of the document in your S3 bucket
     local_path = 'tmp/wip_document.docx' # Specify the local file path where the document will be saved
 
-    # Download the document from S3
+    # Download the customer document copy from S3
     download_docx_from_s3(bucket_name, key, local_path)
 
     # Open Doc for WIP
-    doc = Document(f'{local_path}')
-
-    #choose JSON file to convert to table
-    # Load the JSON data
-    json_file_path = 'tmp/json/filter_high_risk_questions.json'
+    doc_path = f'{local_path}'
+    doc = Document(doc_path)
+    
+    #insert Risk Metrics Breakdown
+    add_heading(doc,'Risk Breakdown by Pillar', style_name='Heading 1') #insert Risk Metrics Header
+    add_empty_line(doc) #insert empty line
+    json_file_path = 'tmp/json/risk_metrics.json'
+    
     with open(json_file_path) as json_file:
         json_data = json.load(json_file)
-    doc_path = f'{local_path}'
-    #json_to_word_table(json_data, doc, doc_path)
-    json_to_table2(json_data, doc, doc_path)
+    
+    create_risk_metrics_table(json_data, doc_path, doc)
+    add_empty_line(doc) #insert empty line
+ 
+    # insert HRI table
+    add_heading(doc,'High Risk Items', style_name='Heading 1') #insert HRI Header
+    add_empty_line(doc) #insert empty line
+    json_file_path = 'tmp/json/filter_high_risk_questions.json'
+    
+    with open(json_file_path) as json_file:
+        json_data = json.load(json_file)
+
+    json_to_table(json_data, doc, doc_path)
+    add_empty_line(doc) #insert empty line
+
+    #insert MRI Table in Doc
+    add_heading(doc,'Medium Risk Items', style_name='Heading 1') #insert MRI Header
+    add_empty_line(doc) #insert empty line
+    json_file_path = 'tmp/json/filter_medium_risk_questions.json'
+    
+    with open(json_file_path) as json_file:
+        json_data = json.load(json_file)
+    
+    json_to_table(json_data, doc, doc_path)
+    add_empty_line(doc) #insert empty line
+
     #json_to_flat_table(json_data, doc, doc_path)
 
     #store WIP doc in S3
