@@ -1,1 +1,396 @@
-{"operationalExcellence": {"OPS 1. How do you determine what your priorities are?": {"UnselectedChoices": ["Evaluate governance requirements", "Evaluate compliance requirements", "Evaluate threat landscape"], "Risk": "HIGH"}, "OPS 2. How do you structure your organization to support your business outcomes?": {"UnselectedChoices": ["Mechanisms exist to identify responsibility and ownership", "Mechanisms exist to request additions, changes, and exceptions", "Responsibilities between teams are predefined or negotiated"], "Risk": "HIGH"}, "OPS 3. How does your organizational culture support your business outcomes?": {"UnselectedChoices": ["Communications are timely, clear, and actionable", "Experimentation is encouraged", "Team members are enabled and encouraged to maintain and grow their skill sets", "Resource teams appropriately", "Diverse opinions are encouraged and sought within and across teams"], "Risk": "HIGH"}, "OPS 4. How do you design your workload so that you can understand its state?": {"UnselectedChoices": ["Implement application telemetry", "Implement and configure workload telemetry", "Implement user activity telemetry", "Implement dependency telemetry", "Implement transaction traceability"], "Risk": "HIGH"}, "OPS 5. How do you reduce defects, ease remediation, and improve flow into production?": {"UnselectedChoices": ["Use version control", "Test and validate changes", "Use configuration management systems", "Use build and deployment management systems", "Perform patch management", "Share design standards", "Implement practices to improve code quality", "Use multiple environments", "Make frequent, small, reversible changes", "Fully automate integration and deployment"], "Risk": "HIGH"}, "OPS 6. How do you mitigate deployment risks?": {"UnselectedChoices": ["Plan for unsuccessful changes", "Test and validate changes", "Use deployment management systems", "Test using limited deployments", "Deploy using parallel environments", "Deploy frequent, small, reversible changes", "Fully automate integration and deployment", "Automate testing and rollback"], "Risk": "HIGH"}, "OPS 7. How do you know that you are ready to support a workload?": {"UnselectedChoices": ["Ensure consistent review of operational readiness", "Use runbooks to perform procedures", "Use playbooks to investigate issues", "Make informed decisions to deploy systems and changes", "Enable support plans for production workloads"], "Risk": "HIGH"}, "OPS 8. How do you understand the health of your workload?": {"UnselectedChoices": ["Identify key performance indicators", "Define workload metrics", "Collect and analyze workload metrics", "Establish workload metrics baselines", "Learn expected patterns of activity for workload", "Alert when workload outcomes are at risk", "Alert when workload anomalies are detected", "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            "], "Risk": "HIGH"}, "OPS 9. How do you understand the health of your operations?": {"UnselectedChoices": ["Identify key performance indicators", "Define operations metrics", "Collect and analyze operations metrics", "Establish operations metrics baselines", "Learn the expected patterns of activity for operations", "Alert when operations outcomes are at risk", "Alert when operations anomalies are detected", "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            "], "Risk": "HIGH"}, "OPS 10. How do you manage workload and operations events?": {"UnselectedChoices": ["Use a process for event, incident, and problem management", "Have a process per alert", "Prioritize operational events based on business impact", "Define escalation paths", "Define a customer communication plan for outages", "Communicate status through dashboards", "Automate responses to events"], "Risk": "HIGH"}}, "security": {"SEC 1. How do you securely operate your workload?": {"UnselectedChoices": ["Identify and validate control objectives", "Keep up-to-date with security threats ", "Keep up-to-date with security recommendations", "Identify threats and prioritize mitigations using a threat model", "Automate testing and validation of security controls in pipelines", "Evaluate and implement new security services and features regularly"], "Risk": "HIGH"}, "SEC 2. How do you manage identities for people and machines?": {"UnselectedChoices": [], "Risk": "NONE"}, "SEC 3. How do you manage permissions for people and machines?": {"UnselectedChoices": ["Establish emergency access process", "Reduce permissions continuously", "Share resources securely within your organization", "Share resources securely with a third party", "Manage access based on life cycle", "Analyze public and cross-account access"], "Risk": "MEDIUM"}, "SEC 4. How do you detect and investigate security events?": {"UnselectedChoices": ["Configure service and application logging", "Analyze logs, findings, and metrics centrally", "Automate response to events", "Implement actionable security events"], "Risk": "HIGH"}, "SEC 5. How do you protect your network resources?": {"UnselectedChoices": ["Control traffic at all layers", "Automate network protection", "Implement inspection and protection"], "Risk": "HIGH"}, "SEC 6. How do you protect your compute resources?": {"UnselectedChoices": ["Perform vulnerability management", "Reduce attack surface", "Implement managed services", "Automate compute protection", "Enable people to perform actions at a distance", "Validate software integrity"], "Risk": "HIGH"}, "SEC 7. How do you classify your data?": {"UnselectedChoices": ["Identify the data within your workload", "Define data protection controls", "Automate identification and classification", "Define data lifecycle management"], "Risk": "HIGH"}, "SEC 8. How do you protect your data at rest?": {"UnselectedChoices": ["Enforce encryption at rest", "Automate data at rest protection", "Enforce access control", "Use mechanisms to keep people away from data"], "Risk": "HIGH"}, "SEC 9. How do you protect your data in transit?": {"UnselectedChoices": ["Implement secure key and certificate\n               management", "Enforce encryption in transit", "Automate detection of unintended data\n               access", "Authenticate network communications"], "Risk": "HIGH"}, "SEC 10. How do you anticipate, respond to, and recover from incidents?": {"UnselectedChoices": ["Develop incident management plans", "Automate containment capability", "Pre-provision access", "Pre-deploy tools", "Run game days"], "Risk": "HIGH"}}, "reliability": {"REL 1. How do you manage service quotas and constraints?": {"UnselectedChoices": ["Aware of service quotas and constraints", "Manage service quotas across accounts and Regions", "Accommodate fixed service quotas and constraints through architecture", "Monitor and manage quotas", "Automate quota management", "Ensure that a sufficient gap exists between the current quotas and the maximum usage to accommodate failover"], "Risk": "HIGH"}, "REL 2. How do you plan your network topology?": {"UnselectedChoices": ["Ensure IP subnet allocation accounts for expansion and availability", "Prefer hub-and-spoke topologies over many-to-many mesh", "Enforce non-overlapping private IP address ranges in all private address spaces where they are connected"], "Risk": "MEDIUM"}, "REL 3. How do you design your workload service architecture?": {"UnselectedChoices": ["Choose how to segment your workload", "Build services focused on specific business domains and functionality", "Provide service contracts per API"], "Risk": "HIGH"}, "REL 4. How do you design interactions in a distributed system to prevent failures?": {"UnselectedChoices": ["Identify which kind of distributed system is required", "Implement loosely coupled dependencies", "Make all responses idempotent", "Do constant work"], "Risk": "HIGH"}, "REL 5. How do you design interactions in a distributed system to mitigate or withstand failures?": {"UnselectedChoices": ["Implement graceful degradation to transform applicable hard dependencies into soft dependencies", "Throttle requests", "Control and limit retry calls", "Fail fast and limit queues", "Set client timeouts", "Make services stateless where possible", "Implement emergency levers"], "Risk": "HIGH"}, "REL 6. How do you monitor workload resources?": {"UnselectedChoices": ["Monitor all components for the workload (Generation)", "Define and calculate metrics (Aggregation)", "Send notifications (Real-time processing and alarming)", "Automate responses (Real-time processing and alarming)", "Analytics", "Conduct reviews regularly", "Monitor end-to-end tracing of requests through your system"], "Risk": "HIGH"}, "REL 7. How do you design your workload to adapt to changes in demand?": {"UnselectedChoices": ["Load test your workload"], "Risk": "MEDIUM"}, "REL 8. How do you implement change?": {"UnselectedChoices": ["Use runbooks for standard activities such as deployment", "Integrate functional testing as part of your deployment", "Integrate resiliency testing as part of your deployment", "Deploy using immutable infrastructure", "Deploy changes with automation"], "Risk": "HIGH"}, "REL 9. How do you back up data?": {"UnselectedChoices": ["Identify and back up all data that needs to be backed up, or reproduce the data from sources", "Perform periodic recovery of the data to verify backup integrity and processes"], "Risk": "HIGH"}, "REL 10. How do you use fault isolation to protect your workload?": {"UnselectedChoices": ["Deploy the workload to multiple locations", "Use bulkhead architectures to limit scope of impact", "Automate recovery for components constrained to a single location"], "Risk": "HIGH"}}, "performance": {"PERF 1. How do you select the best performing architecture?": {"UnselectedChoices": ["Define a process for architectural choices", "Factor cost requirements into decisions ", "Use policies or reference architectures", "Benchmark existing workloads", "Load test your workload"], "Risk": "HIGH"}, "PERF 2. How do you select your compute solution?": {"UnselectedChoices": ["Evaluate the available compute options", "Understand the available compute configuration options", "Collect compute-related metrics", "Determine the required configuration by right-sizing", "Use the available elasticity of resources", "Continually evaluate compute needs based on metrics"], "Risk": "HIGH"}, "PERF 3. How do you select your storage solution?": {"UnselectedChoices": ["Understand storage characteristics and requirements", "Evaluate available configuration options", "Make decisions based on access patterns and metrics"], "Risk": "HIGH"}, "PERF 4. How do you select your database solution?": {"UnselectedChoices": ["Understand data characteristics", "Evaluate the available options", "Collect and record database performance metrics", "Choose data storage based on access patterns", "Optimize data storage based on access patterns and metrics"], "Risk": "HIGH"}, "PERF 5. How do you configure your networking solution?": {"UnselectedChoices": ["Understand how networking impacts performance", "Evaluate available networking features", "Choose appropriately sized dedicated connectivity or VPN for hybrid workloads", "Choose network protocols to improve performance", "Optimize network configuration based on metrics"], "Risk": "HIGH"}, "PERF 6. How do you evolve your workload to take advantage of new releases?": {"UnselectedChoices": ["Stay up-to-date on new resources and services", "Define a process to improve workload performance", "Evolve workload performance over time"], "Risk": "HIGH"}, "PERF 7. How do you monitor your resources to ensure they are performing?": {"UnselectedChoices": ["Record performance-related metrics", "Analyze metrics when events or incidents occur", "Establish key performance indicators (KPIs) to measure workload performance", "Use monitoring to generate alarm-based notifications", "Review metrics at regular intervals", "Monitor and alarm proactively"], "Risk": "HIGH"}, "PERF 8. How do you use tradeoffs to improve performance?": {"UnselectedChoices": ["Learn about design patterns and services", "Measure the impact of performance improvements", "Use various performance-related strategies"], "Risk": "HIGH"}}, "costOptimization": {"COST 1. How do you implement cloud financial management?": {"UnselectedChoices": ["Monitor cost proactively", "Quantify business value from cost optimization", "Report and notify on cost optimization"], "Risk": "MEDIUM"}, "COST 2. How do you govern usage?": {"UnselectedChoices": ["Develop policies based on your organization requirements", "Implement cost controls"], "Risk": "HIGH"}, "COST 3. How do you monitor usage and cost?": {"UnselectedChoices": ["Configure detailed information sources", "Identify cost attribution categories", "Establish organization metrics", "Configure billing and cost management tools", "Add organization information to cost and usage", "Allocate costs based on workload metrics"], "Risk": "HIGH"}, "COST 4. How do you decommission resources?": {"UnselectedChoices": ["Track resources over their life time", "Enforce data retention policies", "Decommission resources automatically"], "Risk": "HIGH"}, "COST 5. How do you evaluate cost when you select services?": {"UnselectedChoices": ["Analyze all components of this workload", "Perform a thorough analysis of each component", "Select components of this workload to optimize cost in line with organization priorities", "Perform cost analysis for different usage over time"], "Risk": "HIGH"}, "COST 6. How do you meet cost targets when you select resource type, size and number?": {"UnselectedChoices": ["Perform cost modeling", "Select resource type, size, and number based on data", "Select resource type, size, and number automatically based on metrics"], "Risk": "HIGH"}, "COST 7. How do you use pricing models to reduce cost?": {"UnselectedChoices": ["Perform pricing model analysis", "Implement pricing models for all components of this workload", "Perform pricing model analysis at the master account level"], "Risk": "HIGH"}, "COST 8. How do you plan for data transfer charges?": {"UnselectedChoices": ["Perform data transfer modeling", "Select components to optimize data transfer cost", "Implement services to reduce data transfer costs"], "Risk": "HIGH"}, "COST 9. How do you manage demand, and supply resources?": {"UnselectedChoices": ["Perform an analysis on the workload demand", "Implement a buffer or throttle to manage demand", "Supply resources dynamically"], "Risk": "HIGH"}, "COST 10. How do you evaluate new services?": {"UnselectedChoices": ["Develop a workload review process", "Review and analyze this workload regularly"], "Risk": "HIGH"}}, "sustainability": {"SUS 1. How do you select Regions for your workload?": {"UnselectedChoices": ["Choose Region based on both business requirements and sustainability goals"], "Risk": "MEDIUM"}, "SUS 2. How do you align cloud resources to your demand?": {"UnselectedChoices": ["Scale workload infrastructure dynamically", "Optimize geographic placement of workloads based on their networking requirements", "Align SLAs with sustainability goals", "Stop the creation and maintenance of unused assets", "Optimize team member resources for activities performed", "Implement buffering or throttling to flatten the demand curve"], "Risk": "MEDIUM"}, "SUS 3. How do you take advantage of software and architecture patterns to support your sustainability goals?": {"UnselectedChoices": ["Optimize software and architecture for asynchronous and scheduled jobs", "Remove or refactor workload components with low or no use", "Optimize areas of code that consume the most time or resources", "Optimize impact on devices and equipment", "Use software patterns and architectures that best support data access and storage patterns"], "Risk": "MEDIUM"}, "SUS 4. How do you take advantage of data management policies and patterns to support your sustainability goals?": {"UnselectedChoices": ["Implement a data classification policy", "Use policies to manage the lifecycle of your datasets", "Use elasticity and automation to expand block storage or file system", "Remove unneeded or redundant data", "Use shared file systems or storage to access common data", "Minimize data movement across networks", "Back up data only when difficult to recreate", "Use technologies that support data access and storage patterns"], "Risk": "MEDIUM"}, "SUS 5. How do you select and use cloud hardware and services in your architecture to support your sustainability goals?": {"UnselectedChoices": ["Use the minimum amount of hardware to meet your needs", "Use instance types with the least impact", "Use managed services", "Optimize your use of hardware-based compute accelerators"], "Risk": "MEDIUM"}, "SUS 6. How do your organizational processes support your sustainability goals?": {"UnselectedChoices": ["Adopt methods that can rapidly introduce sustainability improvements", "Keep your workload up-to-date", "Increase utilization of build environments", "Use managed device farms for testing"], "Risk": "MEDIUM"}}}
+{
+    "operationalExcellence": {
+        "OPS 1. How do you determine what your priorities are?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "OPS 2. How do you structure your organization to support your business outcomes?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "OPS 3. How does your organizational culture support your business outcomes?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "OPS 4. How do you design your workload so that you can understand its state?": {
+            "UnselectedChoices": [
+                "Implement application telemetry",
+                "Implement and configure workload telemetry",
+                "Implement user activity telemetry",
+                "Implement dependency telemetry",
+                "Implement transaction traceability"
+            ],
+            "Risk": "HIGH"
+        },
+        "OPS 5. How do you reduce defects, ease remediation, and improve flow into production?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "OPS 6. How do you mitigate deployment risks?": {
+            "UnselectedChoices": [
+                "Automate testing and rollback"
+            ],
+            "Risk": "NONE"
+        },
+        "OPS 7. How do you know that you are ready to support a workload?": {
+            "UnselectedChoices": [
+                "Use playbooks to investigate issues",
+                "Enable support plans for production workloads"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "OPS 8. How do you understand the health of your workload?": {
+            "UnselectedChoices": [
+                "Identify key performance indicators",
+                "Define workload metrics",
+                "Collect and analyze workload metrics",
+                "Establish workload metrics baselines",
+                "Learn expected patterns of activity for workload",
+                "Alert when workload anomalies are detected",
+                "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            "
+            ],
+            "Risk": "HIGH"
+        },
+        "OPS 9. How do you understand the health of your operations?": {
+            "UnselectedChoices": [
+                "Identify key performance indicators",
+                "Define operations metrics",
+                "Collect and analyze operations metrics",
+                "Establish operations metrics baselines",
+                "Learn the expected patterns of activity for operations",
+                "Alert when operations anomalies are detected",
+                "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            "
+            ],
+            "Risk": "HIGH"
+        },
+        "OPS 10. How do you manage workload and operations events?": {
+            "UnselectedChoices": [
+                "Automate responses to events"
+            ],
+            "Risk": "NONE"
+        }
+    },
+    "security": {
+        "SEC 1. How do you securely operate your workload?": {
+            "UnselectedChoices": [
+                "Automate testing and validation of security controls in pipelines"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 2. How do you manage identities for people and machines?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "SEC 3. How do you manage permissions for people and machines?": {
+            "UnselectedChoices": [
+                "Share resources securely within your organization",
+                "Share resources securely with a third party",
+                "Manage access based on life cycle",
+                "Analyze public and cross-account access"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 4. How do you detect and investigate security events?": {
+            "UnselectedChoices": [
+                "Analyze logs, findings, and metrics centrally",
+                "Automate response to events",
+                "Implement actionable security events"
+            ],
+            "Risk": "HIGH"
+        },
+        "SEC 5. How do you protect your network resources?": {
+            "UnselectedChoices": [
+                "Automate network protection",
+                "Implement inspection and protection"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 6. How do you protect your compute resources?": {
+            "UnselectedChoices": [
+                "Perform vulnerability management",
+                "Automate compute protection",
+                "Validate software integrity"
+            ],
+            "Risk": "HIGH"
+        },
+        "SEC 7. How do you classify your data?": {
+            "UnselectedChoices": [
+                "Automate identification and classification"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 8. How do you protect your data at rest?": {
+            "UnselectedChoices": [
+                "Automate data at rest protection",
+                "Enforce access control",
+                "Use mechanisms to keep people away from data"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SEC 9. How do you protect your data in transit?": {
+            "UnselectedChoices": [
+                "Enforce encryption in transit",
+                "Automate detection of unintended data\n               access",
+                "Authenticate network communications"
+            ],
+            "Risk": "HIGH"
+        },
+        "SEC 10. How do you anticipate, respond to, and recover from incidents?": {
+            "UnselectedChoices": [
+                "Automate containment capability"
+            ],
+            "Risk": "MEDIUM"
+        }
+    },
+    "reliability": {
+        "REL 1. How do you manage service quotas and constraints?": {
+            "UnselectedChoices": [
+                "Automate quota management"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 2. How do you plan your network topology?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "REL 3. How do you design your workload service architecture?": {
+            "UnselectedChoices": [
+                "Provide service contracts per API"
+            ],
+            "Risk": "NONE"
+        },
+        "REL 4. How do you design interactions in a distributed system to prevent failures?": {
+            "UnselectedChoices": [
+                "Make all responses idempotent",
+                "Do constant work"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 5. How do you design interactions in a distributed system to mitigate or withstand failures?": {
+            "UnselectedChoices": [
+                "Implement graceful degradation to transform applicable hard dependencies into soft dependencies",
+                "Throttle requests",
+                "Control and limit retry calls",
+                "Fail fast and limit queues",
+                "Set client timeouts",
+                "Implement emergency levers"
+            ],
+            "Risk": "HIGH"
+        },
+        "REL 6. How do you monitor workload resources?": {
+            "UnselectedChoices": [
+                "Monitor all components for the workload (Generation)",
+                "Define and calculate metrics (Aggregation)",
+                "Automate responses (Real-time processing and alarming)",
+                "Analytics",
+                "Monitor end-to-end tracing of requests through your system"
+            ],
+            "Risk": "HIGH"
+        },
+        "REL 7. How do you design your workload to adapt to changes in demand?": {
+            "UnselectedChoices": [
+                "Load test your workload"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 8. How do you implement change?": {
+            "UnselectedChoices": [
+                "Integrate resiliency testing as part of your deployment"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "REL 9. How do you back up data?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "REL 10. How do you use fault isolation to protect your workload?": {
+            "UnselectedChoices": [
+                "Deploy the workload to multiple locations",
+                "Select the appropriate locations for your multi-location deployment",
+                "Use bulkhead architectures to limit scope of impact",
+                "Automate recovery for components constrained to a single location"
+            ],
+            "Risk": "HIGH"
+        }
+    },
+    "performance": {
+        "PERF 1. How do you select the best performing architecture?": {
+            "UnselectedChoices": [
+                "Benchmark existing workloads",
+                "Load test your workload"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "PERF 2. How do you select your compute solution?": {
+            "UnselectedChoices": [
+                "Collect compute-related metrics",
+                "Determine the required configuration by right-sizing",
+                "Continually evaluate compute needs based on metrics"
+            ],
+            "Risk": "HIGH"
+        },
+        "PERF 3. How do you select your storage solution?": {
+            "UnselectedChoices": [
+                "Make decisions based on access patterns and metrics"
+            ],
+            "Risk": "NONE"
+        },
+        "PERF 4. How do you select your database solution?": {
+            "UnselectedChoices": [
+                "Understand data characteristics",
+                "Evaluate the available options",
+                "Collect and record database performance metrics",
+                "Choose data storage based on access patterns",
+                "Optimize data storage based on access patterns and metrics"
+            ],
+            "Risk": "HIGH"
+        },
+        "PERF 5. How do you configure your networking solution?": {
+            "UnselectedChoices": [
+                "Understand how networking impacts performance",
+                "Choose appropriately sized dedicated connectivity or VPN for hybrid workloads",
+                "Leverage load-balancing and encryption offloading",
+                "Choose network protocols to improve performance",
+                "Optimize network configuration based on metrics"
+            ],
+            "Risk": "HIGH"
+        },
+        "PERF 6. How do you evolve your workload to take advantage of new releases?": {
+            "UnselectedChoices": [
+                "Evolve workload performance over time"
+            ],
+            "Risk": "NONE"
+        },
+        "PERF 7. How do you monitor your resources to ensure they are performing?": {
+            "UnselectedChoices": [
+                "Record performance-related metrics",
+                "Establish key performance indicators (KPIs) to measure workload performance",
+                "Use monitoring to generate alarm-based notifications",
+                "Review metrics at regular intervals",
+                "Monitor and alarm proactively"
+            ],
+            "Risk": "HIGH"
+        },
+        "PERF 8. How do you use tradeoffs to improve performance?": {
+            "UnselectedChoices": [
+                "Identify how tradeoffs impact customers and efficiency",
+                "Measure the impact of performance improvements",
+                "Use various performance-related strategies"
+            ],
+            "Risk": "HIGH"
+        }
+    },
+    "costOptimization": {
+        "COST 1. How do you implement cloud financial management?": {
+            "UnselectedChoices": [
+                "Quantify business value from cost optimization",
+                "Report and notify on cost optimization",
+                "Create a cost-aware culture"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "COST 2. How do you govern usage?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "COST 3. How do you monitor usage and cost?": {
+            "UnselectedChoices": [
+                "Configure detailed information sources",
+                "Identify cost attribution categories",
+                "Establish organization metrics",
+                "Add organization information to cost and usage",
+                "Allocate costs based on workload metrics"
+            ],
+            "Risk": "HIGH"
+        },
+        "COST 4. How do you decommission resources?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "COST 5. How do you evaluate cost when you select services?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        },
+        "COST 6. How do you meet cost targets when you select resource type, size and number?": {
+            "UnselectedChoices": [
+                "Perform cost modeling",
+                "Select resource type, size, and number based on data",
+                "Select resource type, size, and number automatically based on metrics"
+            ],
+            "Risk": "HIGH"
+        },
+        "COST 7. How do you use pricing models to reduce cost?": {
+            "UnselectedChoices": [
+                "Perform pricing model analysis",
+                "Implement pricing models for all components of this workload"
+            ],
+            "Risk": "HIGH"
+        },
+        "COST 8. How do you plan for data transfer charges?": {
+            "UnselectedChoices": [
+                "Perform data transfer modeling",
+                "Select components to optimize data transfer cost",
+                "Implement services to reduce data transfer costs"
+            ],
+            "Risk": "HIGH"
+        },
+        "COST 9. How do you manage demand, and supply resources?": {
+            "UnselectedChoices": [
+                "Implement a buffer or throttle to manage demand",
+                "Supply resources dynamically"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "COST 10. How do you evaluate new services?": {
+            "UnselectedChoices": [],
+            "Risk": "NONE"
+        }
+    },
+    "sustainability": {
+        "SUS 1. How do you select Regions for your workload?": {
+            "UnselectedChoices": [
+                "Choose Region based on both business requirements and sustainability goals"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 2. How do you align cloud resources to your demand?": {
+            "UnselectedChoices": [
+                "Align SLAs with sustainability goals",
+                "Stop the creation and maintenance of unused assets",
+                "Implement buffering or throttling to flatten the demand curve"
+            ],
+            "Risk": "NONE"
+        },
+        "SUS 3. How do you take advantage of software and architecture patterns to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Optimize software and architecture for asynchronous and scheduled jobs",
+                "Optimize areas of code that consume the most time or resources",
+                "Optimize impact on devices and equipment"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 4. How do you take advantage of data management policies and patterns to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Implement a data classification policy",
+                "Use policies to manage the lifecycle of your datasets",
+                "Use shared file systems or storage to access common data",
+                "Minimize data movement across networks",
+                "Back up data only when difficult to recreate"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 5. How do you select and use cloud hardware and services in your architecture to support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Optimize your use of hardware-based compute accelerators"
+            ],
+            "Risk": "MEDIUM"
+        },
+        "SUS 6. How do your organizational processes support your sustainability goals?": {
+            "UnselectedChoices": [
+                "Adopt methods that can rapidly introduce sustainability improvements",
+                "Use managed device farms for testing"
+            ],
+            "Risk": "MEDIUM"
+        }
+    }
+}
