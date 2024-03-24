@@ -1,0 +1,50 @@
+[
+    {
+        "product_title": "Cloud Strategy and Governance Advisory",
+        "description": "Strategic guidance and governance framework development for effective management of AWS cloud resources.",
+        "key_deliverables": [
+            "Cloud strategy roadmap",
+            "Governance policies and procedures",
+            "Compliance and risk management frameworks",
+            "Training and awareness programs"
+        ],
+        "artifacts": [
+            "Strategy roadmap document",
+            "Governance framework",
+            "Compliance documentation",
+            "Training materials"
+        ],
+        "justification": "This product can help establish governance priorities, evaluate compliance requirements, develop risk management frameworks, and address multiple quick win items related to governance, compliance and security.",
+        "applicable_qws": [
+            "quick_win_id: 1",
+            "quick_win_id: 2",
+            "quick_win_id: 3"
+        ]
+    },
+    {
+        "product_title": "Managed Cloud Services",
+        "description": "Ongoing management and optimization of your AWS cloud environment to ensure performance, security, and cost-efficiency.",
+        "key_deliverables": [
+            "Cloud monitoring and support",
+            "Security and compliance management",
+            "Cost optimization and governance",
+            "Performance tuning and optimization"
+        ],
+        "artifacts": [
+            "Monitoring reports",
+            "Security audit reports",
+            "Cost optimization recommendations",
+            "Performance tuning documentation"
+        ],
+        "justification": "This product provides ongoing optimization, security management, cost governance and other capabilities that can address multiple quick win items related to security, cost and performance.",
+        "applicable_qws": [
+            "quick_win_id: 4",
+            "quick_win_id: 5",
+            "quick_win_id: 6",
+            "quick_win_id: 7",
+            "quick_win_id: 8",
+            "quick_win_id: 9",
+            "quick_win_id: 10"
+        ]
+    }
+]

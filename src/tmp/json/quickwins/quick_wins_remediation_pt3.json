@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "3",
+    "best_practice_option": "Evaluate threat landscape",
+    "remediation_description": "Assess the current threat landscape and identify the top risks and threats to prioritize for remediation",
+    "remediation_solution": "Perform an evaluation of the existing controls and safeguards to identify gaps in security defenses. Research threat intelligence from industry reports and news to determine high risk threats that apply to the organization's environment. Create a prioritized list of threats and vulnerabilities to address based on potential business impact.",
+    "remediation_general_considerations": "When evaluating threats, take organizational factors into account such as compliance requirements, industry standards, geographic location, and other business drivers that may influence risk tolerance.",
+    "effort_estimate": "2 weeks for initial assessment and prioritization; ongoing threat monitoring",
+    "resources_needed": "Security analyst and architect to perform assessment; access to threat intelligence feeds",
+    "domain_impact": "Security"
+}

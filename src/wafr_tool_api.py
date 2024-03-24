@@ -77,8 +77,9 @@ def extract_answers_items(workload_id, lens_alias, milestone_number):
             for choice in answer_summary["Choices"]:
                 # Check if the choice is not in the list of selected choices
                 if choice["ChoiceId"] not in answer_summary["SelectedChoices"]:
-                    # Append the title of the unselected choice to the list
-                    unselected_choices.append(choice["Title"])
+                    if choice["Title"] != "None of these":
+                        # Append the title of the unselected choice to the list
+                        unselected_choices.append(choice["Title"])
             
             # Extract the risk value
             risk = answer_summary["Risk"]

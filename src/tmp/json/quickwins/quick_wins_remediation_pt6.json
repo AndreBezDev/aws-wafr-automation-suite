@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "6",
+    "best_practice_option": "Automate response to events",
+    "remediation_description": "Implement automated response and remediation workflows for detected security events using AWS services",
+    "remediation_solution": "Leverage Amazon EventBridge to set up automated event-driven security workflows. Define rules to match security events from services like AWS Security Hub, GuardDuty, Macie etc. and trigger target responses such as AWS Lambda functions to run automated remediation playbooks. Consider using services like AWS Step Functions to model more complex workflows.",
+    "remediation_general_considerations": "Ensure adequate testing of automated response workflows before deploying to production. Adjust rule thresholds carefully to reduce false positives. Continue manual oversight and have rollback procedures in place.",
+    "effort_estimate": "This is a low effort quick win that can be implemented within 2-4 weeks.",
+    "resources_needed": "Security architect, DevOps engineer familiar with infrastructure-as-code",
+    "domain_impact": "Security"
+}

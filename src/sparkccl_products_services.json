@@ -1,0 +1,168 @@
+{
+    "products_and_services": [
+      {
+        "title": "Landing Zone Review, Design, and Implementation",
+        "description": "Comprehensive review, design, and implementation of AWS Landing Zones tailored to your organization's needs.",
+        "key_deliverables": [
+          "AWS Landing Zone architecture design",
+          "Implementation plan and execution",
+          "Documentation of Landing Zone setup and configurations",
+          "Best practices guidelines",
+          "Training sessions for IT staff"
+        ],
+        "artifacts": [
+          "Architecture diagrams",
+          "Implementation documentation",
+          "Training materials",
+          "Post-implementation support plan"
+        ]
+      },
+      {
+        "title": "DevOps Engineering",
+        "description": "End-to-end DevOps engineering services to streamline software development, testing, and deployment processes.",
+        "key_deliverables": [
+          "CI/CD pipeline setup and optimization",
+          "Infrastructure as Code (IaC) implementation",
+          "Automated testing frameworks",
+          "Monitoring and logging setup",
+          "Deployment automation scripts"
+        ],
+        "artifacts": [
+          "CI/CD pipeline diagrams",
+          "IaC templates",
+          "Testing reports",
+          "Monitoring dashboards",
+          "Deployment scripts"
+        ]
+      },
+      {
+        "title": "DevOps Maturity Assessment",
+        "description": "Assessment of your organization's current DevOps practices and maturity level, along with recommendations for improvement.",
+        "key_deliverables": [
+          "Current state assessment report",
+          "Gap analysis and improvement roadmap",
+          "Training and upskilling plan",
+          "Metrics and KPIs for tracking progress"
+        ],
+        "artifacts": [
+          "Assessment report",
+          "Roadmap document",
+          "Training materials",
+          "Progress tracking dashboard"
+        ]
+      },
+      {
+        "title": "FinOps Review",
+        "description": "Review and optimization of your organization's cloud spending to maximize cost efficiency and ROI.",
+        "key_deliverables": [
+          "Cloud cost analysis report",
+          "Cost optimization recommendations",
+          "Budgeting and cost allocation strategies",
+          "Implementation plan for cost-saving measures"
+        ],
+        "artifacts": [
+          "Cost analysis report",
+          "Optimization plan",
+          "Budgeting guidelines",
+          "Implementation documentation"
+        ]
+      },
+      {
+        "title": "Application Modernisation",
+        "description": "Modernization of legacy applications for improved performance, scalability, and cost-effectiveness in the cloud.",
+        "key_deliverables": [
+          "Legacy application assessment",
+          "Modernization strategy and roadmap",
+          "Application refactoring and re-architecture",
+          "Deployment and testing of modernized applications"
+        ],
+        "artifacts": [
+          "Assessment report",
+          "Modernization roadmap",
+          "Architecture diagrams",
+          "Testing reports"
+        ]
+      },
+      {
+        "title": "Cloud Migrations",
+        "description": "Planning, execution, and management of cloud migrations for seamless transition to AWS.",
+        "key_deliverables": [
+          "Migration strategy and planning",
+          "Application discovery and dependency mapping",
+          "Migration execution and testing",
+          "Post-migration optimization and support"
+        ],
+        "artifacts": [
+          "Migration plan",
+          "Dependency mapping report",
+          "Migration execution documentation",
+          "Optimization recommendations"
+        ]
+      },
+      {
+        "title": "Managed Cloud Services",
+        "description": "Ongoing management and optimization of your AWS cloud environment to ensure performance, security, and cost-efficiency.",
+        "key_deliverables": [
+          "cloud monitoring and support",
+          "Security and compliance management",
+          "Cost optimization and governance",
+          "Performance tuning and optimization"
+        ],
+        "artifacts": [
+          "Monitoring reports",
+          "Security audit reports",
+          "Cost optimization recommendations",
+          "Performance tuning documentation"
+        ]
+      },
+      {
+        "title": "Serverless / Microservice Development",
+        "description": "Design and development of serverless architectures and microservices for scalable and resilient applications.",
+        "key_deliverables": [
+          "Serverless architecture design",
+          "Microservices development and integration",
+          "API gateway setup and configuration",
+          "Performance testing and optimization"
+        ],
+        "artifacts": [
+          "Architecture diagrams",
+          "Microservices codebase",
+          "API documentation",
+          "Performance test results"
+        ]
+      },
+      {
+        "title": "Cloud Strategy and Governance Advisory",
+        "description": "Strategic guidance and governance framework development for effective management of AWS cloud resources.",
+        "key_deliverables": [
+          "Cloud strategy roadmap",
+          "Governance policies and procedures",
+          "Compliance and risk management frameworks",
+          "Training and awareness programs"
+        ],
+        "artifacts": [
+          "Strategy roadmap document",
+          "Governance framework",
+          "Compliance documentation",
+          "Training materials"
+        ]
+      },
+      {
+        "title": "GenAI Consulting",
+        "description": "Consulting services leveraging AI and machine learning technologies to drive innovation and business growth.",
+        "key_deliverables": [
+          "AI strategy and implementation plan",
+          "AI model development and training",
+          "Integration with existing systems",
+          "Performance evaluation and optimization"
+        ],
+        "artifacts": [
+          "AI strategy document",
+          "Trained AI models",
+          "Integration documentation",
+          "Performance evaluation reports"
+        ]
+      }
+    ]
+  }
+  

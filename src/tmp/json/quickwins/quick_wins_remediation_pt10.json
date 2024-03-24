@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "10",
+    "best_practice_option": "Establish organization metrics",
+    "remediation_description": "Implement metrics and alarms for tracking overall AWS costs against targets",
+    "remediation_solution": "1. Identify key cost metrics at organization and account level based on business needs, such as overall AWS spend, monthly projections vs actuals, spend by service, etc. \n2. Set up CloudWatch alarms on the key metrics versus predefined thresholds based on targets and budgets. Receive notifications when approaching or exceeding limits.\n3. Display metrics on management dashboards with drilldown to details. Review and act on alarms.",
+    "remediation_general_considerations": "When implementing metrics and alarms: \n- Verify accuracy of billing and usage data \n- Clean up unused resources to avoid noise \n- Assign accountability for responding to alarms",
+    "effort_estimate": "Quick win, around 2 weeks effort:\n- 1 week to define metrics and alarms\n- 1 week to implement dashboards",
+    "resources_needed": "Cloud economist, solutions architect, devops engineer",
+    "domain_impact": "Finance"
+}

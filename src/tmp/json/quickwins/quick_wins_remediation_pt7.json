@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "7",
+    "best_practice_option": "Implement actionable security events",
+    "remediation_description": "Implement capabilities to detect and investigate security events in the environment",
+    "remediation_solution": "Enable CloudTrail logging across all accounts and integrate the logs with a SIEM solution like Amazon Macie. Configure Macie to detect unusual API calls and user activities and trigger alerts. Build an incident response playbook to investigate the alerts.",
+    "remediation_general_considerations": "Consider least privilege access for cross account roles used by Macie. Tune the Macie alerts to reduce false positives.",
+    "effort_estimate": "2 weeks for initial CloudTrail and Macie setup. Ongoing tuning of alerts.",
+    "resources_needed": "Cloud security engineer to setup and configure CloudTrail, Macie, and SIEM integration. Security analysts to investigate alerts.",
+    "domain_impact": "Security"
+}

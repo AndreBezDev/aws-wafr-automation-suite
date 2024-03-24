@@ -1,0 +1,62 @@
+[
+    {
+        "quick_win_id": 1,
+        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
+        "unselected_best_practice_item": "Evaluate governance requirements",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 2,
+        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
+        "unselected_best_practice_item": "Evaluate compliance requirements",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 3,
+        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
+        "unselected_best_practice_item": "Evaluate threat landscape",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 4,
+        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
+        "unselected_best_practice_item": "Configure service and application logging",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 5,
+        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
+        "unselected_best_practice_item": "Analyze logs, findings, and metrics centrally",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 6,
+        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
+        "unselected_best_practice_item": "Automate response to events",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 7,
+        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
+        "unselected_best_practice_item": "Implement actionable security events",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 8,
+        "best_practice_question": "COST 3. How do you monitor usage and cost?",
+        "unselected_best_practice_item": "Configure detailed information sources",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 9,
+        "best_practice_question": "COST 3. How do you monitor usage and cost?",
+        "unselected_best_practice_item": "Identify cost attribution categories",
+        "effort_estimate": "quick-win"
+    },
+    {
+        "quick_win_id": 10,
+        "best_practice_question": "COST 3. How do you monitor usage and cost?",
+        "unselected_best_practice_item": "Establish organization metrics",
+        "effort_estimate": "quick-win"
+    }
+]

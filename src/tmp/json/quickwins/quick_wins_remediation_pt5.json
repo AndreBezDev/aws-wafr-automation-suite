@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "5",
+    "best_practice_option": "Analyze logs, findings, and metrics centrally",
+    "remediation_description": "Centralize log, findings, and metrics analysis to improve security event detection and investigation.",
+    "remediation_solution": "Implement a central security analytics solution like AWS Security Hub to aggregate findings from services like AWS GuardDuty. Build custom metrics and dashboards in Amazon CloudWatch to detect anomalies. Use Amazon Athena to query logs in Amazon S3.",
+    "remediation_general_considerations": "Consider the volume of logs and findings generated to size analytics services appropriately. Roll out changes incrementally to measure impact.",
+    "effort_estimate": "Quick win estimated as 2 weeks to set up initial AWS Security Hub integration and custom CloudWatch metrics",
+    "resources_needed": "Security analyst, CloudWatch expert, Security Hub administrator",
+    "domain_impact": "Security"
+}

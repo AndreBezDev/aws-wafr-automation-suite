@@ -28,15 +28,15 @@ class DateTimeEncoder(json.JSONEncoder):
 
 
 # Define workload params - To Do: pull from incoming Request POST 
-workload_id = 'f54f24c187bd00731cbab8b1532fff59' #To Do - fetch appropriate id from API
+workload_id = '66658f2b4909462a1bc9a50349bcaec7' #To Do - fetch appropriate id from API
 lens_alias = 'arn:aws:wellarchitected::aws:lens/wellarchitected'
-milestone_number = 2 #normally 1
+milestone_number = 1 #normally 1
 
 # Define s3 artefact params - To Do enable selection of templates 
 input_bucket = 'aws-wafr-automation-base-templates'
 input_key = 'CCL-2024/CCL AWS WAFR - Report Template v0.1.docx'
 output_bucket = 'aws-wafr-automation-output-reports'  # Replace with your output bucket name
-customer_folder = 'CCL'  # Specify customer-specific folder name
+customer_folder = 'KMD'  # Specify customer-specific folder name
 
 if __name__ == "__main__":
     fetch_wafr_questions(workload_id,lens_alias, milestone_number)

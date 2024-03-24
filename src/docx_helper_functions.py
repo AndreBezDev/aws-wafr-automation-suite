@@ -94,6 +94,8 @@ def add_paragraph(doc, text, style_name=None, alignment=None, bold=False, italic
     run.italic = italic
     run.underline = underline
 
+
+
 # Example usage:
 
 # # Create a new document

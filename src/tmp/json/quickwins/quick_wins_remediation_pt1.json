@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "1",
+    "best_practice_option": "Evaluate governance requirements",
+    "remediation_description": "Assess governance requirements and align priorities to meet those requirements.",
+    "remediation_solution": "Form a working group to review current governance policies and requirements. Identify any gaps where existing priorities may not satisfy requirements. Develop a prioritization framework that ensures governance requirements are met while still enabling the business. Communicate new priorities across teams.",
+    "remediation_general_considerations": "Consider regulatory compliance requirements and involve key stakeholders when setting priorities.",
+    "effort_estimate": "2 week effort: 1 week to collect requirements, 1 week to align priorities",
+    "resources_needed": "Governance team, key business stakeholders",
+    "domain_impact": "Governance, Legal/Compliance"
+}

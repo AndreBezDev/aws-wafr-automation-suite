@@ -1,0 +1,10 @@
+{
+    "quick_win_id": "4",
+    "best_practice_option": "Configure service and application logging",
+    "remediation_description": "Enable AWS CloudTrail logging across all accounts to capture API calls and log them to S3. Configure VPC Flow Logs on all VPCs. Enable CloudWatch logging for EC2, Lambda, and other services.",
+    "remediation_solution": "1. Enable CloudTrail in all accounts and log to a centralized S3 bucket. Use CloudTrail Lake for analytics. \n2. For all VPCs, enable VPC Flow Logs to capture network traffic logs. Send to S3 and analyze with services like Athena. \n3. For EC2 instances, Lambda functions, and other supported services, enable CloudWatch Logs with appropriate log retention policies. Send logs to S3 for long term archival.",
+    "remediation_general_considerations": "Logs should be encrypted at rest using KMS. Redact sensitive data before storing logs. Send critical logs to security monitoring tools like GuardDuty.",
+    "effort_estimate": "CloudTrail and VPC Flow logs can be enabled with Terraform/CloudFormation scripts across accounts. Per-service logging may require additional effort to tune log retention and storage.",
+    "resources_needed": "Cloud platform engineer, security engineer, DevOps engineer to implement logging and monitoring architecture.",
+    "domain_impact": "Primarily benefits security domain with increased visibility into API calls, network traffic, and application logs for incident investigation."
+}
