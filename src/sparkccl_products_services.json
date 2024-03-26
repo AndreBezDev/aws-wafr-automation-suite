@@ -19,7 +19,7 @@
       },
       {
         "title": "DevOps Engineering",
-        "description": "End-to-end DevOps engineering services to streamline software development, testing, and deployment processes.",
+        "description": "End-to-end DevOps engineering services to streamline software development, testing, and deployment processes. In general, can be used to address any technical HRI or MRI",
         "key_deliverables": [
           "CI/CD pipeline setup and optimization",
           "Infrastructure as Code (IaC) implementation",

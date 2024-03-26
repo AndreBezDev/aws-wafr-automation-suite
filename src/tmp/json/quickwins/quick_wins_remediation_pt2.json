@@ -1,10 +1,10 @@
 {
     "quick_win_id": "2",
-    "best_practice_option": "Evaluate compliance requirements",
-    "remediation_description": "This quick win focuses on evaluating compliance requirements to help determine priorities.",
-    "remediation_solution": "A detailed analysis should be conducted of all relevant compliance requirements and standards. These should be mapped to current operations to determine gaps, priorities, and next steps. Both internal policies and external regulations should be considered.",
-    "remediation_general_considerations": "When evaluating compliance requirements, be sure to take a risk-based approach focused on the highest priority obligations. Continually revisit this analysis as new requirements emerge.",
-    "effort_estimate": "2 week quick-win effort: - 1 week to compile all compliance requirements - 1 week to map requirements to current operations and document gaps and priorities",
-    "resources_needed": "Security and compliance expert to understand requirements; Operations leads to analyze current practices",
-    "domain_impact": "This would primarily impact security, compliance, and operations."
+    "best_practice_option": "Mechanisms exist to request additions, changes, and exceptions",
+    "remediation_description": "Implement a process for users to request changes or exceptions to configurations",
+    "remediation_solution": "Create a self-service portal where users can submit requests for changes or exceptions. Have an approval workflow before changes are implemented. Log all requests and approvals.",
+    "remediation_general_considerations": "Ensure proper access controls on the portal. Requests should link to tickets or other tracking mechanisms.",
+    "effort_estimate": "2 weeks development time plus ongoing operational overhead",
+    "resources_needed": "Frontend developer, security architect",
+    "domain_impact": "Operations, Security"
 }

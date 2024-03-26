@@ -1,10 +1,10 @@
 {
     "quick_win_id": "5",
-    "best_practice_option": "Analyze logs, findings, and metrics centrally",
-    "remediation_description": "Centralize log, findings, and metrics analysis to improve security event detection and investigation.",
-    "remediation_solution": "Implement a central security analytics solution like AWS Security Hub to aggregate findings from services like AWS GuardDuty. Build custom metrics and dashboards in Amazon CloudWatch to detect anomalies. Use Amazon Athena to query logs in Amazon S3.",
-    "remediation_general_considerations": "Consider the volume of logs and findings generated to size analytics services appropriately. Roll out changes incrementally to measure impact.",
-    "effort_estimate": "Quick win estimated as 2 weeks to set up initial AWS Security Hub integration and custom CloudWatch metrics",
-    "resources_needed": "Security analyst, CloudWatch expert, Security Hub administrator",
-    "domain_impact": "Security"
+    "best_practice_option": "Experimentation is encouraged",
+    "remediation_description": "Encourage experimentation by implementing mechanisms to test new ideas with low risk",
+    "remediation_solution": "Form a small team to brainstorm experimental projects. Start with low-risk, low-effort experiments. Publicize successful results across the organization. Consider an innovation budget and contest to fund promising experiments.",
+    "remediation_general_considerations": "Experiments should align to business goals and outcomes. Balance experimentation with focus and execution.",
+    "effort_estimate": "Set up innovation team: 2 weeks. Run first round of experiments: 4 weeks. Continual improvement effort.",
+    "resources_needed": "Innovation team. Potential budget for experiments.",
+    "domain_impact": "Culture, Product/Service Innovation"
 }

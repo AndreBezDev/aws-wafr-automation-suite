@@ -1,10 +1,10 @@
 {
     "quick_win_id": "6",
-    "best_practice_option": "Automate response to events",
-    "remediation_description": "Implement automated response and remediation workflows for detected security events using AWS services",
-    "remediation_solution": "Leverage Amazon EventBridge to set up automated event-driven security workflows. Define rules to match security events from services like AWS Security Hub, GuardDuty, Macie etc. and trigger target responses such as AWS Lambda functions to run automated remediation playbooks. Consider using services like AWS Step Functions to model more complex workflows.",
-    "remediation_general_considerations": "Ensure adequate testing of automated response workflows before deploying to production. Adjust rule thresholds carefully to reduce false positives. Continue manual oversight and have rollback procedures in place.",
-    "effort_estimate": "This is a low effort quick win that can be implemented within 2-4 weeks.",
-    "resources_needed": "Security architect, DevOps engineer familiar with infrastructure-as-code",
-    "domain_impact": "Security"
+    "best_practice_option": "Resource teams appropriately",
+    "remediation_description": "Ensure teams are resourced appropriately to support business outcomes",
+    "remediation_solution": "Conduct an assessment of current team resourcing and workloads. Identify gaps where teams are under-resourced. Develop a hiring plan to bring on additional headcount and allow teams to focus on critical outcomes.",
+    "remediation_general_considerations": "When resourcing teams, consider broader organizational goals beyond the scope of specific teams. Pursue cross-training and resource sharing opportunities across teams where appropriate.",
+    "effort_estimate": "2-4 weeks to conduct assessment and develop hiring plan. 4-8 weeks to onboard new hires.",
+    "resources_needed": "HR business partner, finance partner, team managers",
+    "domain_impact": "Operations, Human Resources"
 }

@@ -1,10 +1,10 @@
 {
     "quick_win_id": "8",
-    "best_practice_option": "Configure detailed information sources",
-    "remediation_description": "Enable detailed monitoring in AWS Cost Explorer to track usage and cost at granular levels.",
-    "remediation_solution": "1. In the AWS Billing Console, navigate to Cost Explorer. 2. In the left pane, choose Cost & Usage Reports. 3. Choose Create report. 4. Enter a Report name and select the required Report time granularity. 5. In the Include resource IDs section, select Yes. 6. In the Report data section, select Include and choose Resource IDs from the drop-down list. 7. Choose Next. 8. On the Deliver report page, configure the S3 bucket to receive the reports. 9. Choose Next then Review and Complete to create the report.",
-    "remediation_general_considerations": "Detailed AWS Cost and Usage reports can help attribute spends to specific services, resources, tags, and other dimensions. Schedule automatic generation and archiving of these reports for better insights.",
-    "effort_estimate": "1. Enable detailed cost and usage reporting in Cost Explorer - 0.5 days. 2. Configure automatic generation and archiving - 0.5 days.",
-    "resources_needed": "User with permissions to configure cost and usage reporting in AWS Billing Console.",
-    "domain_impact": "Finance"
+    "best_practice_option": "Perform vulnerability management",
+    "remediation_description": "Implement a vulnerability management program to continuously monitor compute resources for vulnerabilities and misconfigurations.",
+    "remediation_solution": "Enable Amazon Inspector to run vulnerability scans on EC2 instances on a regular cadence. Analyze findings and implement fixes and mitigate risks based on criticality. Consider tools like Qualys or Rapid7 to complement Inspector capabilities.",
+    "remediation_general_considerations": "Have a well defined process for tracking, prioritizing and fixing vulnerabilities discovered during scans. Integrate scanning into CI/CD pipelines.",
+    "effort_estimate": "2 weeks for implementation; ongoing effort for continuous scans and remediations",
+    "resources_needed": "Security engineer, operations engineer",
+    "domain_impact": "Security"
 }

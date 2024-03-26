@@ -20,7 +20,9 @@ from dotenv import load_dotenv, dotenv_values
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
 load_dotenv(dotenv_path)
 
+#initialise LangSmith
 langsmith_client = Client()
+
 #OpenAI
 llm_open_ai = OpenAI(temperature=0.0) #OpenAI(max_tokens=3500, model='gpt-3.5-turbo', temperature=0.0)
 
@@ -49,7 +51,7 @@ def save_json_to_file(data, file_path):
 def get_top_10_quick_wins(llm):
     
     class QuickWins(BaseModel):
-        quick_win_id: int = Field(description="index of quick wins for numbered list")
+        quick_win_id: str = Field(description="index of quick wins for numbered list")
         best_practice_question: str = Field(description="best practice question from hri or mri filtered views")
         unselected_best_practice_item: str = Field(description="The unselected choice of best practice")
         effort_estimate: str = Field(description="classify effort into quick-wins, or longer project")
@@ -194,6 +196,6 @@ def get_sparkccl_products(llm):
 
 
 
-if __name__ == "__main__":
-    #nada
-    print("yo wassup")
+# if __name__ == "__main__":
+#     #nada
+#     print("yo wassup")

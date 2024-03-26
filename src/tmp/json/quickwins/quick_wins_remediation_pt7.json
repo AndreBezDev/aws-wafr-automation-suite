@@ -1,10 +1,10 @@
 {
     "quick_win_id": "7",
-    "best_practice_option": "Implement actionable security events",
-    "remediation_description": "Implement capabilities to detect and investigate security events in the environment",
-    "remediation_solution": "Enable CloudTrail logging across all accounts and integrate the logs with a SIEM solution like Amazon Macie. Configure Macie to detect unusual API calls and user activities and trigger alerts. Build an incident response playbook to investigate the alerts.",
-    "remediation_general_considerations": "Consider least privilege access for cross account roles used by Macie. Tune the Macie alerts to reduce false positives.",
-    "effort_estimate": "2 weeks for initial CloudTrail and Macie setup. Ongoing tuning of alerts.",
-    "resources_needed": "Cloud security engineer to setup and configure CloudTrail, Macie, and SIEM integration. Security analysts to investigate alerts.",
+    "best_practice_option": "Identify threats and prioritize mitigations using a threat model",
+    "remediation_description": "Perform a threat modeling exercise to identify potential threats and vulnerabilities for the workload. Prioritize mitigations based on risk and impact.",
+    "remediation_solution": "Gather architects, security experts, and developers to create a threat model using a framework like STRIDE or PASTA. Document components, data flows, trust boundaries, entry/exit points. Identify threats like data exfiltration, DoS, account compromise. Prioritize threats based on likelihood and impact. Determine risk mitigation solutions for high priority threats.",
+    "remediation_general_considerations": "Consider integrating threat modeling early in the SDLC. Revisit the threat model periodically and after major architecture changes. Leverage available AWS resources like Well-Architected reviews.",
+    "effort_estimate": "2 weeks for initial threat modeling exercise. 1 week for implementation of critical security controls.",
+    "resources_needed": "Security architects, Risk/Compliance roles, Developers",
     "domain_impact": "Security"
 }

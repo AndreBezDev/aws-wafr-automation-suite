@@ -1,10 +1,10 @@
 {
     "quick_win_id": "9",
-    "best_practice_option": "Identify cost attribution categories",
-    "remediation_description": "Implement tagging and cost allocation reporting to attribute costs to departments, projects, applications etc.",
-    "remediation_solution": "1. Design a taxonomy of tags aligned to the business, considering attributes like department, project, application etc. \n2. Develop policies and procedures to ensure tags are applied properly in account provisioning and resource deployment. \n3. Configure detailed cost allocation reports in AWS Cost Explorer based on tags. \n4. Socialize reports with business leaders to facilitate cost ownership. ",
-    "remediation_general_considerations": "Tagging discipline is critical to enable precise cost visibility. Reports should be easy to understand for non-technical business owners.",
-    "effort_estimate": "Quick win requiring 1 week for tag design and 3 weeks for implementation.",
-    "resources_needed": "Cloud Economist, Account Admin, Infrastructure Owner",
-    "domain_impact": "Finance"
+    "best_practice_option": "Reduce attack surface",
+    "remediation_description": "Reduce the attack surface of compute resources by removing unnecessary ports, protocols, services, credentials, and permissions.",
+    "remediation_solution": "Review compute instance configurations and security groups to identify unnecessary open ports, protocols, services running, credentials stored, and permissions granted. Create a remediation plan to close ports, disable unused services, rotate credentials, and apply the principle of least privilege to permissions.",
+    "remediation_general_considerations": "When reducing attack surface, carefully test changes in staging environments before deploying to production to avoid availability issues. Monitor systems post-deployment to ensure no loss of critical functionality.",
+    "effort_estimate": "2 weeks - Review configurations and create remediation plan; 4 weeks - Execute staged deployments of changes across estate",
+    "resources_needed": "Security analyst, Infrastructure engineer",
+    "domain_impact": "Security"
 }

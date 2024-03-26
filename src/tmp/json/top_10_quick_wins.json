@@ -1,62 +1,62 @@
 [
     {
-        "quick_win_id": 1,
-        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
-        "unselected_best_practice_item": "Evaluate governance requirements",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "1",
+        "best_practice_question": "OPS 2. How do you structure your organization to support your business outcomes?",
+        "unselected_best_practice_item": "Mechanisms exist to identify responsibility and ownership",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 2,
-        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
-        "unselected_best_practice_item": "Evaluate compliance requirements",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "2",
+        "best_practice_question": "OPS 2. How do you structure your organization to support your business outcomes?",
+        "unselected_best_practice_item": "Mechanisms exist to request additions, changes, and exceptions",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 3,
-        "best_practice_question": "OPS 1. How do you determine what your priorities are?",
-        "unselected_best_practice_item": "Evaluate threat landscape",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "3",
+        "best_practice_question": "OPS 2. How do you structure your organization to support your business outcomes?",
+        "unselected_best_practice_item": "Responsibilities between teams are predefined or negotiated",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 4,
-        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
-        "unselected_best_practice_item": "Configure service and application logging",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "4",
+        "best_practice_question": "OPS 3. How does your organizational culture support your business outcomes?",
+        "unselected_best_practice_item": "Communications are timely, clear, and actionable",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 5,
-        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
-        "unselected_best_practice_item": "Analyze logs, findings, and metrics centrally",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "5",
+        "best_practice_question": "OPS 3. How does your organizational culture support your business outcomes?",
+        "unselected_best_practice_item": "Experimentation is encouraged",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 6,
-        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
-        "unselected_best_practice_item": "Automate response to events",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "6",
+        "best_practice_question": "OPS 3. How does your organizational culture support your business outcomes?",
+        "unselected_best_practice_item": "Resource teams appropriately",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 7,
-        "best_practice_question": "SEC 4. How do you detect and investigate security events?",
-        "unselected_best_practice_item": "Implement actionable security events",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "7",
+        "best_practice_question": "SEC 1. How do you securely operate your workload?",
+        "unselected_best_practice_item": "Identify threats and prioritize mitigations using a threat model",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 8,
-        "best_practice_question": "COST 3. How do you monitor usage and cost?",
-        "unselected_best_practice_item": "Configure detailed information sources",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "8",
+        "best_practice_question": "SEC 6. How do you protect your compute resources?",
+        "unselected_best_practice_item": "Perform vulnerability management",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 9,
-        "best_practice_question": "COST 3. How do you monitor usage and cost?",
-        "unselected_best_practice_item": "Identify cost attribution categories",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "9",
+        "best_practice_question": "SEC 6. How do you protect your compute resources?",
+        "unselected_best_practice_item": "Reduce attack surface",
+        "effort_estimate": "Quick win"
     },
     {
-        "quick_win_id": 10,
-        "best_practice_question": "COST 3. How do you monitor usage and cost?",
-        "unselected_best_practice_item": "Establish organization metrics",
-        "effort_estimate": "quick-win"
+        "quick_win_id": "10",
+        "best_practice_question": "SEC 6. How do you protect your compute resources?",
+        "unselected_best_practice_item": "Implement managed services",
+        "effort_estimate": "Quick win"
     }
 ]
