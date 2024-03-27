@@ -284,7 +284,7 @@ def create_bar_chart(json_data, doc_path, doc):
     fig.tight_layout()
 
     # Save the plot as an image
-    plot_path = 'tmp/bar_chart.png'
+    plot_path = '/tmp/bar_chart.png'
     plt.savefig(plot_path)
 
     # Close the plot to release resources
@@ -427,7 +427,7 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     # Specify S3 bucket details and local file path
     bucket_name = f'{output_bucket}'  # Replace with your S3 bucket name
     key = f'{customer_folder}/CCL_WAFR_Report.docx'      # Replace with the key of the document in your S3 bucket
-    local_path = 'tmp/wip_document.docx' # Specify the local file path where the document will be saved
+    local_path = '/tmp/wip_document.docx' # Specify the local file path where the document will be saved
 
     # Download the customer document copy from S3
     download_docx_from_s3(bucket_name, key, local_path)
@@ -439,9 +439,9 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     #insert Risk Metrics Breakdown
     add_heading(doc,'Risk Breakdown by Pillar', style_name='Heading 1') #insert Risk Metrics Header
     add_empty_line(doc) #insert empty line
-    json_file_path = 'tmp/json/risk_metrics.json'
+    json_file_path = '/tmp/risk_metrics.json'
     
-    with open(json_file_path) as json_file:
+    with open(json_file_path, 'rb') as json_file:
         json_data = json.load(json_file)
     
     create_risk_metrics_table(json_data, doc_path, doc)
@@ -450,13 +450,16 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     #insert bar chart
     create_bar_chart(json_data, doc_path, doc)
 
+    #store WIP doc in S3 - progress
+    upload_to_s3(local_path, bucket_name, key)
+
     # insert HRI table
     add_page_break(doc)
     add_heading(doc,'High Risk Items', style_name='Heading 1') #insert HRI Header
     add_empty_line(doc) #insert empty line
-    json_file_path = 'tmp/json/filter_high_risk_questions.json'
+    json_file_path = '/tmp/filter_high_risk_questions.json'
     
-    with open(json_file_path) as json_file:
+    with open(json_file_path, 'rb') as json_file:
         json_data = json.load(json_file)
 
     json_to_table(json_data, doc, doc_path)
@@ -466,13 +469,16 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     add_page_break(doc)
     add_heading(doc,'Medium Risk Items', style_name='Heading 1') #insert MRI Header
     add_empty_line(doc) #insert empty line
-    json_file_path = 'tmp/json/filter_medium_risk_questions.json'
+    json_file_path = '/tmp/filter_medium_risk_questions.json'
     
-    with open(json_file_path) as json_file:
+    with open(json_file_path, 'rb') as json_file:
         json_data = json.load(json_file)
     
     json_to_table(json_data, doc, doc_path)
     add_empty_line(doc) #insert empty line
+
+    #store WIP doc in S3 - progress
+    upload_to_s3(local_path, bucket_name, key)
 
     # Start Remediation Plan
     add_page_break(doc)
@@ -482,22 +488,25 @@ def initialise_docs(inputBucket, inputKey, outputBucket,customerFoler):
     remediation_pts = quick_wins_section_prep()
 
     # Insert QW Table
-    json_file_path = 'tmp/json/top_10_quick_wins.json'
+    json_file_path = '/tmp/top_10_quick_wins.json'
     
-    with open(json_file_path) as json_file:
+    with open(json_file_path, 'rb') as json_file:
         json_data = json.load(json_file)
     create_top_10_qw_table(json_data, doc, doc_path)
     add_empty_line(doc) #insert empty line
 
+    #store WIP doc in S3 - progress
+    upload_to_s3(local_path, bucket_name, key)
+    
     # Insert QW Remediation sections
     for file in remediation_pts:
         print(f"current file path is: {file}")
-        with open(file) as json_file:
+        with open(file, 'rb') as json_file:
             json_data = json.load(json_file)
         create_qw_remediation_item(json_data, doc_path, doc)  
         add_empty_line(doc)
 
-    #store WIP doc in S3
+    #store WIP doc in S3 - progress
     upload_to_s3(local_path, bucket_name, key)
 
 
@@ -530,7 +539,7 @@ def test():
     # Specify S3 bucket details and local file path
     bucket_name = f'{output_bucket}'  # Replace with your S3 bucket name
     key = f'{customer_folder}/CCL_WAFR_Report.docx'      # Replace with the key of the document in your S3 bucket
-    local_path = 'tmp/wip_document.docx' # Specify the local file path where the document will be saved
+    local_path = '/tmp/wip_document.docx' # Specify the local file path where the document will be saved
 
     # Download the customer document copy from S3
     #download_docx_from_s3(bucket_name, key, local_path)
@@ -542,7 +551,7 @@ def test():
     add_page_break(doc)
     add_heading(doc,'Testing', style_name='Heading 2')
 
-    json_file_path = 'tmp/json/top_10_quick_wins.json'
+    json_file_path = '/tmp/top_10_quick_wins.json'
     
     with open(json_file_path) as json_file:
         json_data = json.load(json_file)

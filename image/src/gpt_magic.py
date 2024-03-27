@@ -17,7 +17,7 @@ from langsmith import Client
 from dotenv import load_dotenv, dotenv_values
 
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '..','..', '.env')
 load_dotenv(dotenv_path)
 
 #initialise LangSmith
@@ -28,13 +28,21 @@ llm_open_ai = OpenAI(temperature=0.0) #OpenAI(max_tokens=3500, model='gpt-3.5-tu
 
 #Bedrock
 BEDROCK_CLAUDE_MODEL = "anthropic.claude-v2:1"
+
+bedrock_session = boto3.Session(region_name='us-east-1')
+boto3_bedrock = bedrock_session.client(service_name="bedrock")
+
+bedrock_client = boto3.client('bedrock')
+bedrock_runtime_client = boto3.client('bedrock-runtime')
+
 llm_bedrock = Bedrock(
-    credentials_profile_name="default",
-    region_name="us-east-1",
+    client=bedrock_runtime_client,
     model_id=BEDROCK_CLAUDE_MODEL,
     model_kwargs={"max_tokens_to_sample": 5120},
+    region_name="us-east-1"
 )
-
+    # credentials_profile_name="default",
+    # region_name="us-east-1",
 
 def save_json_to_file(data, file_path):
     """
@@ -60,8 +68,8 @@ def get_top_10_quick_wins(llm):
 
     #get prompt input data
     #read json
-    json_file_path = 'tmp/json/filter_high_risk_questions.json'
-    with open(json_file_path) as json_file:
+    json_file_path = '/tmp/filter_high_risk_questions.json'
+    with open(json_file_path, 'rb') as json_file:
             json_data = json.load(json_file)
     
     #prompt template
@@ -117,14 +125,14 @@ def quick_wins_section_prep():
     llm = llm_bedrock
     #Get quick wins
     quick_wins_output = get_top_10_quick_wins(llm)
-    file_path = "tmp/json/top_10_quick_wins.json"
+    file_path = "/tmp/top_10_quick_wins.json"
     save_json_to_file(quick_wins_output, file_path)
     print("quick wins top 10 file saved")
 
     # #Get remediation plan
     # Read JSON file
-    json_file_path = 'tmp/json/top_10_quick_wins.json'
-    with open(json_file_path) as json_file:
+    json_file_path = '/tmp/top_10_quick_wins.json'
+    with open(json_file_path, 'rb') as json_file:
         json_data = json.load(json_file)
 
     # Loop through each item in the JSON data
@@ -132,13 +140,13 @@ def quick_wins_section_prep():
     for item in json_data:
         remediation_item = get_quick_wins_remediation_plan(item,llm)
         index = item["quick_win_id"]
-        file_path = f"tmp/json/quickwins/quick_wins_remediation_pt{index}.json"
+        file_path = f"/tmp/quick_wins_remediation_pt{index}.json"
         save_json_to_file(remediation_item, file_path)
         print(f"{file_path} saved successfully")
         remediation_pts_file_paths.append(file_path)
     
     # get sparccl products mapped
-    get_sparkccl_products(llm)
+    #get_sparkccl_products(llm)
     return(remediation_pts_file_paths)
 
 
@@ -164,14 +172,14 @@ def get_sparkccl_products(llm):
             ccl_json_data = json.load(json_file)
     
     #read json
-    json_file_path = 'tmp/json/top_10_quick_wins.json'
-    with open(json_file_path) as json_file:
+    json_file_path = '/tmp/top_10_quick_wins.json'
+    with open(json_file_path, 'rb') as json_file:
             qw_json_data = json.load(json_file)
 
     #prompt template
     PROMPT_TEMPLATE_TEXT = """
     We are CCL, an AWS Consultancy. We have the following products:{SparkCCL_products}. \n
-    Please consider the customer WAFR quick wins report: \n{input_json} and suggest as many suitabale CCL products as possible. 
+    Please consider the customer WAFR quick wins report: \n{input_json} and suggest as many suitabale CCL products as possible strictly as a json output. 
     \n{format_instructions}
     """
 
@@ -186,7 +194,7 @@ def get_sparkccl_products(llm):
     sparkccl_product_mapping_json = chain.invoke({"input_json": str(qw_json_data), "SparkCCL_products": str(ccl_json_data)})
     
     #save json file
-    file_path = "tmp/json/sparkccl_product_mapping.json"
+    file_path = "/tmp/sparkccl_product_mapping.json"
     save_json_to_file(sparkccl_product_mapping_json, file_path)
     print("spark products mapped and saved to json")
     return(sparkccl_product_mapping_json)

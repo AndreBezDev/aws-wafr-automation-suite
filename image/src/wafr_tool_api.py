@@ -10,7 +10,7 @@ class DateTimeEncoder(json.JSONEncoder):
             return o.isoformat()
         return super().default(o)
 
-client = boto3.client('wellarchitected')
+client = boto3.client(service_name='wellarchitected', region_name="ap-southeast-2")
 
 
 # def get_report():
@@ -96,7 +96,7 @@ def extract_answers_items(workload_id, lens_alias, milestone_number):
         # Store the extracted data for this pillar in the dictionary of extracted data by pillar
         extracted_data_by_pillar[pillar_id] = extracted_data
     
-    with open('tmp/json/pillar_answers.json', 'w') as f:
+    with open('/tmp/pillar_answers.json', 'w') as f:
         json.dump(extracted_data_by_pillar, f, cls=DateTimeEncoder)
 
     return extracted_data_by_pillar
@@ -117,7 +117,7 @@ def filter_high_risk_questions(extracted_data_by_pillar):
         if filtered_data:
             filtered_data_by_pillar[pillar_id] = filtered_data
 
-    with open('tmp/json/filter_high_risk_questions.json', 'w') as f:
+    with open('/tmp/filter_high_risk_questions.json', 'w') as f:
         json.dump(filtered_data_by_pillar, f, cls=DateTimeEncoder)
     return filtered_data_by_pillar 
 
@@ -135,7 +135,7 @@ def filter_medium_risk_questions(extracted_data_by_pillar):
         if filtered_data:
             filtered_data_by_pillar[pillar_id] = filtered_data
 
-    with open('tmp/json/filter_medium_risk_questions.json', 'w') as f:
+    with open('/tmp/filter_medium_risk_questions.json', 'w') as f:
         json.dump(filtered_data_by_pillar, f, cls=DateTimeEncoder)
     return filtered_data_by_pillar 
 
@@ -164,7 +164,7 @@ def extract_risk_table_items(workload_id, lens_alias,milestone_number):
             "NotApplicable": risk_counts.get("NOT_APPLICABLE", None)
         }
         pillars_risk_dict.append(pillar_metrics) #pillar = pillars_risk_dict[0] #hri_count = pillar['High']
-    with open('tmp/json/risk_metrics.json', 'w') as f:
+    with open('/tmp/risk_metrics.json', 'w') as f:
         json.dump(pillars_risk_dict, f, cls=DateTimeEncoder)
     return pillars_risk_dict
    
